@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { getCssText } from "@/styles";
+import { globalStyles } from "@/styles/global";
 
 const inter = Roboto({
   subsets: ["latin"],
@@ -17,8 +19,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  globalStyles();
   return (
     <html lang="en">
+      <head>
+        <style
+          id="stitches"
+          dangerouslySetInnerHTML={{ __html: getCssText() }}
+        />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
