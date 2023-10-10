@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { getCssText } from "@/styles";
 import { globalStyles } from "@/styles/global";
+import { Container, Header } from "@/styles/pages/app";
+
+import logoImg from "@/assets/logo.svg";
 
 const inter = Roboto({
   subsets: ["latin"],
@@ -28,7 +31,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: getCssText() }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Container>
+          <Header>
+            <img src={logoImg.src} alt="" />
+          </Header>
+          {children}
+        </Container>
+      </body>
     </html>
   );
 }
