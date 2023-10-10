@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Roboto } from "next/font/google";
 import { getCssText } from "@/styles";
 import { globalStyles } from "@/styles/global";
@@ -34,7 +35,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Container>
           <Header>
-            <img src={logoImg.src} alt="" />
+            <Image src={logoImg.src} alt="" width={130} height={52} />
           </Header>
           {children}
         </Container>
