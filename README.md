@@ -1,31 +1,23 @@
-# Ignite Timer
+# Ecommerce Frontend
 
 ## Overview
 
 This is a ecommerce frontend application.
 ![Ecommerce Preview](./src/assets/preview.png)
 
-## Features
-
-- **Task Input**: Users can define the task they'll be working on.
-- **Timer Setting**: Set a custom time duration for each task.
-- **Task Tracking**: Visualize the progress of ongoing tasks and review the history of completed, paused, or interrupted tasks.
-- **Task History**: View a log of all tasks, their status, and the time spent on them.
-
 ## Technologies Used
 
-- **React.js**: For building the user interface.
-- **Styled Components**: For styling the components.
+- **NextJS 13**: For building the user interface.
+- **TailwindCSS**: For styling the components.
 - **TypeScript**: For adding static type-checking along with the latest ECMAScript features.
 - **ESLint**: To enforce a consistent coding style and find problems in the code.
-- **useReducer**: For managing state logic in the component hierarchy.
-- **useContext**: To provide a global state for the application.
-- **Immer**: To handle the state immutability in a more convenient way.
-- **Date-fns**: For formatting and managing dates and times.
-- **Phosphor-react**: For using icons throughout the application.
+- **Hooks**: For managing state logic in the component hierarchy.
 - **React-hook-form**: For managing form state and validation.
-- **Zod**: For schema validation.
-- **React Router**: For managing navigation and conditional rendering of components.
+- **Axios**: Managing the api calls.
+- **Lucide-react**: For icons.
+- **Query-string**: For parse any string.
+- **React-hot-toast**: For toast animation.
+- **Zustand**: A small, fast and scalable bearbones state-management solution using simplified flux principles.
 
 ## Getting Started
 
@@ -33,19 +25,22 @@ This is a ecommerce frontend application.
 
 - Node.js
 - npm or Yarn
+- You must clone and run the backend of the ecommerce (https://github.com/samueloh99/ecommerce-admin)
+- After up and running in your local (backend) copy and paste the URL of your backend to you .env file (see the .env.example)
+  {URL BACKEND}/api/{STOREID created on Backend}
 
 ### Installation
 
 1. Clone the repository:
 
 ```
-git clone https://github.com/samueloh99/ignite-timer.git
+git clone https://github.com/samueloh99/ecommerce.git
 ```
 
 2. Navigate to the project directory:
 
 ```
-cd ignite-timer
+cd ecommerce
 ```
 
 2. Install NPM packages:
@@ -63,17 +58,6 @@ npm dev
 or
 yarn dev
 ```
-
-## Usage
-
-1. **Add a New Task**: Enter the task name and set the desired time.
-2. **Start the Timer**: Begin the timer and focus on your task.
-3. **Pause/Resume**: Pause and resume tasks as needed.
-4. **Review**: Navigate to the history tab to review your task history.
-
-## Design
-
-The design of the application is available on Figma. You can view it [here](<https://www.figma.com/file/v6uwqVgFpZTuJnhYAGGTvm/Ignite-Timer-(Community)?type=design&node-id=0-1&mode=design&t=CW8dLmykRdjjeRxK-0>).
 
 ## Contributing
 
@@ -93,6 +77,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Samuel Oh - [samueloh99@gmail.com](mailto:samueloh99@gmail.com)
 
-Project Link: [https://github.com/samueloh99/ignite-timer](https://github.com/samueloh99/ignite-timer)
-
-Live Project Link: https://ignite-timer-three-chi.vercel.app/
+Live Project Link: https://ecommerce-coral-chi.vercel.app/
